@@ -2,11 +2,15 @@ package com.mandatory.database;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-public class MandatoryDatabaseOrmApplication {
+@EnableJpaRepositories
+public class MandatoryDatabaseOrmApplication
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         SpringApplication.run(MandatoryDatabaseOrmApplication.class, args);
     }
 
