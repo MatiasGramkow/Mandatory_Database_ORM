@@ -48,7 +48,7 @@ public class UserController
         }
     }
 
-    @RequestMapping("/users/delete")
+    @PostMapping("/users/delete")
     public ResponseEntity deleteUser(@RequestParam(name = "user_id") Long userId)
     {
         try

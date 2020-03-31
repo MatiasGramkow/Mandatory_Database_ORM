@@ -27,17 +27,16 @@ public class UserService implements UserServiceInterface
         user.setEmail(email);
         return userRepository.save(user);
     }
+    @Override
+    public void deleteUser(UserEntity user)
+    {
+        userRepository.delete(user);
+    }
 
     @Override
     public UserEntity getUserEntityByUserId(long id)
     {
         return userRepository.getUserEntityByUserId(id);
-    }
-
-    @Override
-    public void deleteUser(UserEntity user)
-    {
-         userRepository.delete(user);
     }
 
     @Override
